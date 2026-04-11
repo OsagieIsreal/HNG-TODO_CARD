@@ -1,21 +1,21 @@
 import React from "react";
+import { Tag } from "@chakra-ui/react";
 
 const TagItem: React.FC<{ tag: string }> = ({ tag }) => (
-  <li
-    style={{
-      backgroundColor: "#f0edf5",
-      color: "#6b5a7e",
-      borderRadius: "6px",
-      padding: "3px 10px",
-      fontSize: "0.72rem",
-      fontWeight: 600,
-      letterSpacing: "0.03em",
-      listStyle: "none",
-      whiteSpace: "nowrap",
-    }}
+  <Tag.Root
+    bg="gray.100"
+    color="gray.700"
+    borderRadius="md"
+    px={2.5}
+    py={1}
+    fontSize="xs"
+    fontWeight={600}
+    letterSpacing="wide"
+    whiteSpace="nowrap"
+    _hover={{ bg: "gray.200" }}
   >
-    #{tag}
-  </li>
+    <Tag.Label>#{tag}</Tag.Label>
+  </Tag.Root>
 );
 
 export default TagItem;
